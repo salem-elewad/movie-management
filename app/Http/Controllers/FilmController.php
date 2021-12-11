@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Film;
+use App\Http\Requests\Film as FilmRequest;
 
 class FilmController extends Controller
 {
@@ -13,7 +14,8 @@ class FilmController extends Controller
      */
     public function index()
     {
-        //
+        $films = Film::all();
+        return view('index', compact('films'));
     }
 
     /**
@@ -32,7 +34,7 @@ class FilmController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FilmRequest $request)
     {
         //
     }
@@ -66,7 +68,7 @@ class FilmController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(FilmRequest $request, $id)
     {
         //
     }

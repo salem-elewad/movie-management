@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width,
         initial-scale=1">
         <title>Films</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+        <link rel="stylesheet" href={{ asset('css/bulma.min.css') }}>
         @yield('css')
     </head>
     <body>
